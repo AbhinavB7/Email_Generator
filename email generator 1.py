@@ -1,3 +1,4 @@
+#import module
 from tkinter import *
 
 def generate_email():
@@ -7,7 +8,10 @@ def generate_email():
 
     disp_tf.insert(0,f'{first_name}{last_name}@{company_name}.com')
 
+#create root window    
 root = Tk()
+
+#title and window dimensions
 root.title('PythonGuides')
 root.geometry('360x300')
 root.config(bg='black')
@@ -20,10 +24,12 @@ my_name = Label(root, text ='- Abhinav B', bg='cyan', fg='blue', height = 1, wid
 my_name.config(font =("times new roman", 8))
 my_name.place(x=220, y=240)
 
+#entries
 first_name_tf = Entry(root)
 last_name_tf = Entry(root)
 company_name_tf = Entry(root)
 
+#labels
 first_name_lbl = Label(
     root,
     text='First Name',
@@ -42,7 +48,7 @@ company_name_lbl = Label(
     bg='black',
     fg='white')
 
-
+#labels placement
 first_name_lbl.place(x=10, y=100)
 first_name_tf.place(x=200, y=100)
 last_name_lbl.place(x=10, y=120)
@@ -50,7 +56,7 @@ last_name_tf.place(x=200, y=120)
 company_name_lbl.place(x=10, y=140)
 company_name_tf.place(x=200, y=140)
 
-
+#button
 btn = Button(
     root,
     text='Generate Email',
@@ -59,6 +65,7 @@ btn = Button(
 )
 btn.place(relx = 0.5, y = 180, anchor = CENTER)
 
+#output display
 disp_tf = Entry(
     root,
     width=30,
@@ -66,6 +73,5 @@ disp_tf = Entry(
     )
 
 disp_tf.place(relx = 0.5, y = 220, anchor = CENTER)
-
 
 root.mainloop()
